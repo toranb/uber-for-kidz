@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.g-map{
+  height: 736px;
+  width: 414px;
+}
+.g-map-canvas {
+  width: 100%;
+  height: 100%;
+}
