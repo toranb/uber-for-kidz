@@ -1,1 +1,21 @@
-<h1>hello world</h1>
+<header class="header">
+  <h1>Ride Share</h1>
+</header>
+<div class="outside">
+  <img class="driver-img" src="/images/driver.png">
+</div>
+<footer class="footer">
+  <div class="centered">
+    {{#if riders}}
+      <img class="round" onclick={{action "stop"}} src="/images/pause.png">
+    {{else}}
+      <img class="round" onclick={{action "start"}} src="/images/play.png">
+    {{/if}}
+  </div>
+  <div class="lower"></div>
+</footer>
+<GoogleMap as |context|>
+  {{#each riders as |rider|}}
+    <GoogleMarker @context={{context}} @rider={{rider}} />
+  {{/each}}
+</GoogleMap>
